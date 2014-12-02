@@ -41,8 +41,6 @@ For example:
 
 * _set_filedir_directory_curl_opts_ defines options for scraping this kind of webpage: http://filedir.com/android/books-reference/
 
-* _set_googleplay_app_curl_opts_ defines options for scraping this kind of webpage: https://play.google.com/store/apps/details?id=com.faadooengineers.numericalmethods
-
 ## Usage
 
 The script will be called periodically by a cron job, as often as specified by the job's frequency descriptor which can be configured during setup. The script may also be executed by running:
