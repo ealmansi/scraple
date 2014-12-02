@@ -62,33 +62,12 @@ function set_filedir_app_curl_opts(&$ch)
 	));
 }
 
-function set_googleplay_app_curl_opts(&$ch)
-{
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-	curl_setopt($ch, CURLOPT_FAILONERROR, false);
-	// curl_setopt($ch, CURLOPT_PROXY, 'proxy_ip');
-	// curl_setopt($ch, CURLOPT_USERPWD, 'user:password');
-	curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 60);
-	curl_setopt($ch, CURLOPT_TIMEOUT, 120);
-	curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-		'accept-language: en-US,en;q=0.8',
-		'user-agent: ' . get_random_user_agent(),
-		'x-chrome-uma-enabled: 1',
-		'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-		'cache-control: max-age=0',
-		"content-type: text/html; charset=utf-8"
-	));
-}
-
 /* auxilliaries */
 
 function get_proxy_mesh_ip()
 {
 	$proxies = array(
-					'us.proxymesh.com:31280',
-					'uk.proxymesh.com:31280',
-					// 'us-il.proxymesh.com:31280',
-					// 'open.proxymesh.com:31280',
+					// 'something.com:31280', // ip : port
 				);
 
 	return $proxies[rand(0, count($proxies) - 1)];
@@ -96,5 +75,5 @@ function get_proxy_mesh_ip()
 
 function get_proxy_mesh_auth()
 {
-	return 'test1x:trial123';
+	return 'user:password';
 }
