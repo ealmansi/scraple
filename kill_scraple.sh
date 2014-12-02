@@ -1,0 +1,1 @@
+ps -ef | grep 'scraple.php' | awk '{print $2}' | xargs kill -2
