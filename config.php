@@ -7,8 +7,8 @@ function Config($key)
 	$config = array(
 		
 		/* database configuration */
-		'DB_USER' 		=> 'scraplemysql',
-		'DB_PASSWORD' 	=> 'scraple123456',
+		'DB_USER' 		=> 'dbuser',
+		'DB_PASSWORD' 	=> 'dbpassword',
 		'DB_NAME' 		=> 'db_scraple',
 		'DB_ENCODING' 	=> 'utf8',
 
